@@ -1,0 +1,8 @@
+/* Design tokens: change colours here and everything follows. */
+:root{
+  --bg:#fff; --ink:#1b2333; --mut:#667085; --line:#e4e7ec; --soft:#f4f6f9;
+  --acc:#2563eb; --dim:#c3c9d4;
+}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#12161f; --ink:#e6e9f0; --mut:#98a2b3; --line:#2a3140; --soft:#1a2030; --acc:#6ea0ff; --dim:#4a5365}
+}

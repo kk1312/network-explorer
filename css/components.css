@@ -1,0 +1,17 @@
+/* Reusable UI pieces: buttons, canvas, table, form controls. */
+.btn{border:1px solid var(--line);background:var(--bg);color:var(--ink);padding:5px 12px;border-radius:6px;font:inherit;font-size:14px;cursor:pointer}
+.row{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;margin-bottom:10px}
+label{font-size:14px;color:var(--mut)}
+select{font:inherit;font-size:14px;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:3px 6px}
+input[type=range]{width:100%;accent-color:var(--acc)}
+.note{color:var(--mut);font-size:14px;max-width:68ch}
+.canvas{width:100%;height:auto;aspect-ratio:600/440;border:1px solid var(--line);border-radius:8px;display:block;background:var(--bg)}
+.canvas text{fill:var(--mut);font-size:12px;text-anchor:middle;pointer-events:none}
+.ed{stroke:var(--dim);stroke-width:1.6}
+.nd{fill:var(--acc);stroke:var(--bg);stroke-width:2;cursor:pointer}
+.nd.sel{stroke:var(--ink)}
+.wrap{overflow:auto;max-height:420px}
+table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:tabular-nums}
+th,td{padding:4px 6px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-weight:600}
+th:first-child,td:first-child{text-align:left}
