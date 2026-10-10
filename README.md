@@ -36,3 +36,10 @@ Then open http://localhost:8000.
 - **New random graph model:** add a file in `js/models/` that returns a `Graph`, then call it from a view.
 - **New view:** add a file in `js/views/` that exports `mount(root)` and returns a cleanup function, then add one line to `routes` in `js/main.js`.
 - **Force layout or charts:** import d3 as an ES module, for example `import * as d3 from "https://cdn.jsdelivr.net/npm/d3@7.8.5/+esm"`.
+
+## TODO
+
+- Add display of adjacency matrix, section for graph laplacian and the spectral partitions of the graph in sandbox.
+- Include more metrics, have options for how many metrics I want to see at one time in sandbox.
+- Start developing a guided walkthrough for basics where we start with a graph, then show its representation, look at each metric
+- Similar walkthrough for large scale graph structure, random graphs, processes on random graphs
