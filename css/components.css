@@ -15,3 +15,10 @@ table{border-collapse:collapse;width:100%;font-size:13px;font-variant-numeric:ta
 th,td{padding:4px 6px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
 th{font-weight:600}
 th:first-child,td:first-child{text-align:left}
+.btn.on{background:var(--acc);border-color:var(--acc);color:var(--bg)}
+.canvas{touch-action:none}
+.ed{pointer-events:none}
+.hit{stroke:transparent;stroke-width:14}
+.canvas[data-mode="edit"] .nd{cursor:grab}
+.canvas[data-mode="delete"] .nd:hover{stroke:#d92d20}
+.canvas[data-mode="delete"] .hit:hover + .ed{stroke:#d92d20}

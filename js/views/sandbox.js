@@ -12,10 +12,13 @@ export function mount(root) {
         <div class="row">
           <label>Colour and size by <select id="by"></select></label>
           <label><input type="checkbox" id="dir"> Directed</label>
+        </div>
+        <div class="row">
+          <button class="btn" id="del" aria-pressed="false">Delete</button>
           <button class="btn" id="clear">Clear</button>
         </div>
         <div class="wrap" id="table"></div>
-        <p class="note">Click empty space to add a node. Click two nodes in turn to connect them. Double-click a node to delete it.</p>
+        <p class="note">Click empty space to add a node. Click two nodes in turn to connect them. Press and drag a node to move it. Switch Delete on, then click a node or an edge to remove it.</p>
       </aside>
     </div>`;
 
@@ -27,7 +30,7 @@ export function mount(root) {
 
   const canvas = createGraphCanvas($('#stage'), g, { editable: true });
   const table = metricsTable($('#table'));
-  const by = $('#by');
+  const by = $('#by'), delBtn = $('#del');
   by.innerHTML = metrics.map(m => `<option value="${m.id}">${m.label}</option>`).join('');
 
   const update = () => {
@@ -40,6 +43,12 @@ export function mount(root) {
   by.onchange = update;
   $('#dir').onchange = e => g.setDirected(e.target.checked);
   $('#clear').onclick = () => g.clear();
+  delBtn.onclick = () => {
+    const on = !delBtn.classList.contains('on');
+    delBtn.classList.toggle('on', on);
+    delBtn.setAttribute('aria-pressed', on);
+    canvas.setMode(on ? 'delete' : 'edit');
+  };
   update();
 
   return () => canvas.destroy();

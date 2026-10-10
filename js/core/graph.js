@@ -39,6 +39,8 @@ export class Graph {
     this.emit();
   }
 
+  removeEdge(k) { this.edges.splice(k, 1); this.emit(); }
+
   clear() { this.nodes = []; this.edges = []; this.emit(); }
 
   setDirected(flag) {
