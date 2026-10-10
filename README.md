@@ -30,15 +30,6 @@ python3 -m http.server 8000
 
 Then open http://localhost:8000.
 
-## Publish on GitHub Pages
-
-1. Create a repository and push this folder to it (the `index.html` must be at the repository root).
-2. In the repository, open Settings, then Pages.
-3. Under Build and deployment, choose "Deploy from a branch", pick `main` and `/ (root)`, and save.
-4. After a minute the site is live at `https://<your-username>.github.io/<repository>/`.
-
-All paths are relative and routing uses the URL hash, so it works under that sub-path without any configuration.
-
 ## Extending it
 
 - **New metric:** copy `js/metrics/degree.js`, change `id`, `label` and `compute(graph)`, then import it in `js/metrics/index.js`. It appears in the tables and colour menus.
